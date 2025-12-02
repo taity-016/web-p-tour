@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>เว็บสำหรับคุณณัฐกฤษฎิ์</title>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 139, 0.8); /* น้ำเงินเข้ม โปร่งใส */
+        overflow: hidden;
+        position: relative;
+    }
+
+    .container {
+        position: relative;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.3); /* กรอบข้อความโปร่งใสสีขาว */
+        padding: 50px 80px;
+        border-radius: 20px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    h1 {
+        color: white;
+        font-size: 3em;
+        margin-bottom: 40px;
+    }
+
+    button {
+        padding: 15px 30px;
+        margin: 10px;
+        font-size: 1.2em;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    #yesBtn {
+        background-color: #1e90ff; /* น้ำเงินอ่อน */
+        color: white;
+    }
+
+    #noBtn {
+        background-color: #ccc;
+        color: black;
+    }
+
+    /* ป๊อปอัพด้านบน */
+    #popup {
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(255,255,255,0.9);
+        color: #d6336c;
+        padding: 15px 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        display: none; /* เริ่มซ่อน */
+        z-index: 100;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+
+<div id="popup">ต้องกดเข้าไปดู 😡</div>
+
+<div class="container">
+    <h1>สนใจละสิ มันน่าเบื่อนะ 💖</h1>
+    <button id="yesBtn"><a href="home1.html">ดูต่อเลย</a></button>
+    <button id="noBtn">ไม่ดูต่อ</button>
+</div>
+
+<script>
+const yesBtn = document.getElementById("yesBtn");
+const noBtn = document.getElementById("noBtn");
+const popup = document.getElementById("popup");
+
+
+
+// ปุ่มไม่ดูต่อ
+noBtn.addEventListener("click", () => {
+    // แสดงป๊อปอัพ
+    popup.style.display = "block";
+
+    // ซ่อนป๊อปอัพอัตโนมัติหลัง 2 วินาที
+    setTimeout(() => {
+        popup.style.display = "none";
+    }, 2000);
+});
+</script>
+
+</body>
+</html>
