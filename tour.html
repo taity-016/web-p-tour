@@ -5,14 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>เว็บสำหรับคุณณัฐกฤษฎิ์</title>
 
-
 <style>
     body, html {
         margin: 0;
         padding: 0;
         height: 100%;
         font-family: 'Segoe UI', sans-serif;
-        background: linear-gradient(135deg, #f5d0c5, #a76e63);
+        background: linear-gradient(135deg, #fce8f3, #d9ecff, #ffd6e8);
         overflow: hidden;
     }
 
@@ -23,7 +22,7 @@
         top: 0;
         left: 0;
         z-index: -1;
-        filter: blur(20px) brightness(0.7);
+        filter: blur(18px) brightness(0.85);
         object-fit: cover;
     }
 
@@ -40,10 +39,11 @@
     .image-box {
         width: 330px;
         max-height: 80vh;
-        border-radius: 20px;
+        border-radius: 22px;
         overflow: hidden;
-        box-shadow: 0 0 30px rgba(0,0,0,0.3);
-        background: rgba(255,255,255,0.1);
+        background: rgba(255,255,255,0.25);
+        backdrop-filter: blur(12px);
+        box-shadow: 0 0 30px rgba(255, 182, 193, 0.4);  /* ชมพูอ่อน */
     }
 
     .image-box img,
@@ -51,33 +51,34 @@
         width: 100%;
         height: auto;
         display: none;
-        border-radius: 20px;
+        border-radius: 22px;
     }
 
     .text-box {
         width: 490px;
         max-height: 80vh;
-        background: rgba(255, 255, 255, 0.25);
-        backdrop-filter: blur(10px);
-        color: #4b2e2e;
+        background: rgba(255,255,255,0.35);
+        backdrop-filter: blur(12px);
         padding: 25px;
-        border-radius: 18px;
+        border-radius: 20px;
         overflow-y: auto;
-        box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        box-shadow: 0 0 25px rgba(80,150,255,0.3), 
+                    0 0 25px rgba(255,150,200,0.3);
+        color: #3f4c77; /* ฟ้าเข้มนิดๆ อ่านง่าย */
     }
 
     h1 { 
-        margin: 0 0 10px; 
+        margin: 0 0 10px;
         font-size: 28px;
-        color: #6b3f3f;
+        color: #ff6fa8; /* ชมพูหวาน */
+        text-shadow: 0 0 8px rgba(255,150,200,0.4);
     }
 
     p {
         margin: 0;
         font-size: 18px;
         line-height: 1.6;
-        white-space: pre;       /* ให้ <br> ทำงาน */
-        overflow-wrap: normal;  
+        white-space: pre;
     }
 
     .btn {
@@ -85,17 +86,19 @@
         top: 50%;
         transform: translateY(-50%);
         font-size: 40px;
-        color: #6b3f3f;
-        background: rgba(255, 255, 255, 0.3);
+        color: #6b3f6b; /*ชมพูม่วงนิดๆ*/
+        background: rgba(255,255,255,0.5);
         border: none;
         padding: 10px 18px;
-        border-radius: 12px;
+        border-radius: 14px;
         cursor: pointer;
         transition: 0.3s;
+        box-shadow: 0 0 12px rgba(255,150,200,0.4);
     }
 
     .btn:hover {
-        background: rgba(255, 255, 255, 0.5);
+        background: rgba(255,255,255,0.7);
+        box-shadow: 0 0 16px rgba(150,200,255,0.5);
     }
 
     #prevBtn { left: 20px; }
@@ -111,6 +114,7 @@
         }
     }
 </style>
+
 </head>
 
 <body>
@@ -120,13 +124,13 @@
 <div class="content" id="contentBox">
 
     <div class="image-box">
-        <img src="IMG_3734.jpeg" class="slide" style="display: block;">
-        <img src="IMG_2762.jpeg" class="slide">
-        <img src="IMG_6303.jpeg" class="slide">
-        <img src="IMG_6436.jpeg" class="slide">
-        <img src="IMG_6443.jpeg" class="slide">
-        <img src="IMG_3354.png" class="slide">
-       <img src="IMG_6297.jpeg" class="slide">
+        <img src="t2.jpeg" class="slide" style="display: block;">
+        <img src="t4.jpeg" class="slide">
+        <img src="t5.jpeg" class="slide">
+        <img src="t6.jpeg" class="slide">
+        <img src="t7.jpeg" class="slide">
+        <img src="t8.png" class="slide">
+       <img src="t9.jpeg" class="slide">
 
         <video class="slide" id="videoSlide" controls>
             <source src="k2.mp4" type="video/mp4">
@@ -135,10 +139,10 @@
         <video class="slide" id="videoSlide" controls>
             <source src="t1.mp4" type="video/mp4">
         </video>
-         <img src="IMG_7848.jpeg" class="slide">
-          <img src="IMG_7829.jpeg" class="slide">
+         <img src="t10.jpeg" class="slide">
+          <img src="t11.jpeg" class="slide">
           <img src="t3.png" class="slide">
-           <img src="IMG_7842.jpeg" class="slide">
+           <img src="t12.jpeg" class="slide">
     </div>
 
     <div class="text-box" id="textBox">
@@ -199,9 +203,9 @@
 แล้วบางทีเค้าเองที่โมโหเธอ<br>เค้าขอโทษนะคะ ให้อภัยเค้านะ ที่ทำไปก็รักนั่นแหละน่าาา<br>โกรธเยอะแก่ไวนะ 😅`,
 `เค้าขอบคุณเธอนะ ที่เธออยู่กับเค้า ถึงเค้าจะเอาแต่ใจ<br>ก็อยากเอาแต่เธออยู่แต่ว่าอยู่ไกล👉👈หยอกๆๆๆๆๆๆๆ<br>เค้าไม่เคยชอบกอดเลย จนมาเจอเธอ<br>กอดเธอแล้วรู้สึกสบายหัว ปัญหาอะไรๆก็ปล่อยวางมากขึ้น<br>อยากไปอยู่ด้วยเลย แต่ว่ายังไม่หมั้น ยายจะด่า<br>นี่เค้าว่าเค้าพูดมากละเดี๋ยวเธอเบื่อ
 `,
-`5 เดือนแล้ววว 🎇🎉<br>
-เค้าไม่ขออะไรมากหรอก ที่เป็นอยู่ทุกวันนี้มันก็ดีมากๆสำหรับเค้าแล้ว<br>(perfect สุดๆเลยหละ)<br>
-รักพี่ทัวร์นะคะ💕 `,
+`<b>5 เดือนแล้ววว 🎇🎉<br>
+เค้าไม่ขออะไรมากหรอก <br>ที่เป็นอยู่ทุกวันนี้มันก็ดีมากๆสำหรับเค้าแล้ว<br>(perfect สุดๆเลยหละ)<br>
+รักพี่ทัวร์นะคะ💕</b> `,
 ];
 
     const slides = document.querySelectorAll(".slide");

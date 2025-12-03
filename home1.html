@@ -4,122 +4,130 @@
   <meta charset="UTF-8" />
   <title>สำหรับคุณณัฐกฤษฎิ์</title>
   <style>
-    body {
-      font-family: 'Tahoma', sans-serif;
-      text-align: center;
-      background-color: #ffe6f0;
-      padding: 30px;
-      margin: 0;
-    }
+  body {
+    font-family: 'Tahoma', sans-serif;
+    text-align: center;
+    background-color: #e7f4ff; /* ฟ้าอ่อนหวาน */
+    padding: 30px;
+    margin: 0;
+  }
 
-    h1 {
-      font-size: 2em;
-      color: #d6336c;
-      margin-bottom: 20px;
-    }
+  h1 {
+    font-size: 2em;
+    color: #3b8edb; /* ฟ้าน้ำเงินอ่อน */
+    margin-bottom: 20px;
+  }
 
-    .btn {
-      padding: 10px 20px;
-      margin: 10px;
-      font-size: 1.2em;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: 0.3s;
-      user-select: none;
-    }
+  h2 {
+    color: #3b8edb;
+  }
 
-    #yesBtn {
-      background-color: #f48fb1;
-      color: white;
-    }
+  .btn {
+    padding: 10px 22px;
+    margin: 10px;
+    font-size: 1.3em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    user-select: none;
+  }
 
-    #noBtn {
-      background-color: #ccc;
-      color: black;
-      position: absolute;
-      user-select: none;
-    }
+  #yesBtn {
+    background-color: #74b9ff; /* ฟ้าพาสเทล */
+    color: white;
+    box-shadow: 0 4px 12px rgba(80, 160, 240, 0.4);
+  }
 
-    #gallery {
-      display: none;
-      margin-top: 30px;
-      max-width: 320px;
-      margin-left: auto;
-      margin-right: auto;
-      background: #ffe4f0;
-      border-radius: 15px;
-      padding: 25px;
-      box-shadow: 0 6px 20px rgba(214, 51, 108, 0.3);
-      user-select: none;
-    }
+  #yesBtn:hover {
+    background-color: #4ea3ff;
+  }
 
-    .slide {
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      user-select: none;
-    }
+  #noBtn {
+    background-color: #dfe6e9;
+    color: #2d3436;
+    position: absolute;
+    user-select: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(120, 120, 120, 0.2);
+  }
 
-    .slide.active {
-      display: flex;
-    }
+  #gallery {
+    display: none;
+    margin-top: 30px;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #f0faff;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 6px 20px rgba(80, 160, 240, 0.25);
+    user-select: none;
+  }
 
-    .slide img {
-      width: 100%;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(214, 51, 108, 0.2);
-      user-select: none;
-      -webkit-user-drag: none;
-    }
+  .slide {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    user-select: none;
+  }
 
-    .caption {
-      margin-top: 12px;
-      font-size: 1.05em;
-      color: #d6336c;
-      font-weight: 600;
-      user-select: none;
-    }
+  .slide.active {
+    display: flex;
+  }
 
-    #music {
-      margin-top: 20px;
-      text-align: center;
-      user-select: none;
-    }
+  .slide img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(80, 160, 240, 0.2); /* เงาฟ้า */
+    user-select: none;
+    -webkit-user-drag: none;
+  }
 
-    iframe {
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(214, 51, 108, 0.25);
-      user-select: none;
-    }
+  .caption {
+    margin-top: 12px;
+    font-size: 1.05em;
+    color: #3b8edb;
+    font-weight: 600;
+    user-select: none;
+  }
 
-    .nav-buttons {
-      margin-top: 20px;
-      user-select: none;
-    }
+  iframe {
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(80, 160, 240, 0.25);
+    user-select: none;
+  }
 
-    .nav-buttons button {
-      background-color: #f48fb1;
-      border: none;
-      color: white;
-      padding: 10px 18px;
-      margin: 0 12px;
-      font-size: 1.1em;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-      user-select: none;
-    }
+  .nav-buttons {
+    margin-top: 20px;
+    user-select: none;
+  }
 
-    .nav-buttons button:hover {
-      background-color: #d6336c;
-    }
-  </style>
+  .nav-buttons button {
+    background-color: #74b9ff;
+    border: none;
+    color: white;
+    padding: 10px 18px;
+    margin: 0 12px;
+    font-size: 1.1em;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    user-select: none;
+    box-shadow: 0 4px 12px rgba(80, 160, 240, 0.35);
+  }
+
+  .nav-buttons button:hover {
+    background-color: #4ea3ff;
+  }
+</style>
+
 </head>
 <body>
   <h1>เธอรักเค้าไหม 🥺</h1>
-  <button id="yesBtn" class="btn"><a href="tour.html">รักกก💖</a></button>
-  <button id="noBtn" class="btn">ไม่ตกลง</button>
+ 
+  <center><button id="yesBtn" class="btn"><a href="tour.html">รักกก💖</a></button>
+  <button id="noBtn" class="btn">ไม่ตกลง</button></center>
 
   <div id="gallery">
     <h2>เค้าก็รักเธอเหมือนกันนะ อิอิ</h2>
